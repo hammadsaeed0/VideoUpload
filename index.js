@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.send('Hello, this is your test API!');
 });
 
+app.get('/user', (req, res) => {
+    res.send('Hello, this is your test API!');
+  });
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

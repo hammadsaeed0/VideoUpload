@@ -5,7 +5,7 @@ require('dotenv').config()
 const server = express()
 
 // Ensure that S3 Bucket is properly loaded
-console.log('S3 BUCKET', process.env.AWS_S3_BUCKET)
+// console.log('S3 BUCKET', process.env.AWS_S3_BUCKET)
 
 // Middleware Plugins
 server.use(bodyParser.json())
@@ -20,5 +20,5 @@ server.use('/', [
 // Start the server
 server.listen(8000, error => {
   if (error) console.error('Error starting', error)
-  else console.log('Started at http://localhost:7000')
+  else console.log('Started at http://localhost:8000')
 })

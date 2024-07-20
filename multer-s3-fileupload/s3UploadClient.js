@@ -3,15 +3,15 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 
 const s3 = new aws.S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  region: process.env.AWS_DEFAULT_REGION
+  accessKeyId: "AKIAW3MEFVWD45X3KK4S",
+  secretAccessKey: "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",
+  region: "us-east-1"
 });
 
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: process.env.AWS_S3_BUCKET,
+    bucket: "videouploadapi",
     contentType: multerS3.AUTO_CONTENT_TYPE, // Automatically set content type based on file extension
     acl: 'public-read',
     metadata: (req, file, cb) => {
